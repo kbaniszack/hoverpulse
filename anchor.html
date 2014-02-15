@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css" media="screen">
+			body { margin:0; padding: 0; font-family: 'trebuchet ms', trebuchet, verdana }
+			div { margin:0; padding:0 }
+			#thumbs { position: relative; width: 198px; height: 198px; }
+			div.thumb { float: left; padding: 1px; width: 64px; height: 64px; }
+			div.thumb img { border: 2px solid white; cursor: pointer ;position: absolute; top: 0px; left: 0px;}
+		</style>
+		<script type="text/javascript" src="./jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="./jquery.hoverpulse.js"></script>
+		<script type="text/javascript">
+			$(window).load(function() {
+				$('p.msg').html('Mouse over images for pulse effect, click to open link in new window.');
+			});
+			$(document).ready(function() {
+				$('div.thumb img').hoverpulse({
+					size: 40,  // number of pixels to pulse element (in each direction)
+					speed: 400 // speed of the animation
+				}).each(function() {
+					/*var $img = $(this);
+					var link = $img.attr('data-link');
+					$img.attr('title','Goto: ' + link);
+					$img.click(function() {
+						window.open(link);
+						return false;
+					});*/
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div style="padding:100px 100px 100px 190px">
+			<div id="thumbs">
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://google.com">
+						<img src="./images/beach1.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://yahoo.com">
+						<img src="./images/beach2.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://msn.com">
+						<img src="./images/beach3.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://facebook.com">
+						<img src="./images/beach4.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://twitter.com">
+						<img src="./images/beach5.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://jquery.com">
+						<img src="./images/beach6.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://sitepoint.com">
+						<img src="./images/beach7.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://tuaw.com">
+						<img src="./images/beach8.jpg" width="64" height="64">
+					</a>
+				</div>
+				<div class="thumb" style="position: relative;">
+					<a target="_blank" href="http://ajaxian.com">
+						<img src="./images/beach9.jpg" width="64" height="64">
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
