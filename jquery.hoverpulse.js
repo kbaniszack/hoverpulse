@@ -50,6 +50,7 @@ $.fn.hoverpulse = function(options) {
 				height: (h+2*opts.size_y)+'px',
 				width:  (w+2*opts.size)+'px'
 			}, opts.speed, opts.over);
+			$this.data('thumbnailImage', $this.attr('src')).attr('src', $this.attr('data-fullImage'));
 		},
 		// hover out
 		function() {
@@ -65,6 +66,7 @@ $.fn.hoverpulse = function(options) {
 			}, opts.speed, function() {
 				$this.parent().css('z-index', opts.zIndexNormal);
 				opts.out.call(this);
+				$this.attr('src', $this.data('thumbnailImage'));
 			});
 		}
 	);
